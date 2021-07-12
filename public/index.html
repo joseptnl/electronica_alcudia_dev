@@ -1,13 +1,82 @@
-<html>
+<!DOCTYPE html>
 
-<head>
-  <title>Express</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+<html lang="cat">
+  <!--HEAD-->
+  <head>
+    <!--Meta-->
+    <title>Electrònica Alcúdia - Home</title>
 
-<body>
-  <h1>Express</h1>
-  <p>Welcome to Express</p>
-</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!--Links-->
+    <!--Styles-->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/normalize.css">
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+
+    <!--Scripts-->
+    <script src="https://kit.fontawesome.com/99101d434a.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./javascripts/menu.js"></script>
+  </head>
+  <!--BODY-->
+  <body>
+    <!--Navigation menu-->
+    <div class="navigation">
+      <!--Generic logo-->
+      <div class="nav__logo-container">
+        <img class="nav__logo-img" src="images/logo_expert_uno.png" alt="">
+        <div class="nav__logo-txt">
+          ELECTRÒNICA ALCÚDIA
+        </div>
+      </div>
+      <!--Menu-->
+      <ul class="nav__menu">
+        <li class="nav__menu-item">Inici</li>
+        <li class="nav__menu-item" id="servicesLink">Serveis
+          <ul class="nav__submenu">
+            <li class="nav__submenu-item">Venda i distribució d'electrodomèstics</li>
+            <li class="nav__submenu-item">Instalacions i manteniment d'aires condicionats</li>
+            <li class="nav__submenu-item">Instalació i manteniment de telecomunicacions</li>
+            <li class="nav__submenu-item">Servei tècnic en reparació d'electrodomèstics</li>
+            <li class="nav__submenu-item">Instalació de sistemes d'aigües sanitàries</li>
+          </ul>
+        </li>
+        <li class="nav__menu-item">Catàleg</li>
+        <li class="nav__menu-item">Contacte</li>
+      </ul>
+      <!--Responsive menu-->
+      <div class="nav__responsive ">
+        <!--Open button-->
+        <div class="nav__responsive-button">
+          <i class="fas fa-bars"></i>
+        </div>
+        <!--Menu-->
+        <ul class="nav__responsive-menu">
+          <li class="nav__responsive-menu-item nav__responsive-menu-item--collapsed"><div class="nav__responsive-menu-txt">Inici</div></li>
+          <li class="nav__responsive-menu-item nav__responsive-menu-item--collapsed"><div class="nav__responsive-menu-txt" id="servicesTab">Serveis<i class="fas fa-chevron-down" id="servicesArrow"></i></div>
+            <ul class="nav__responsive-submenu nav__responsive-submenu--collapsed">
+              <li class="nav__responsive-submenu-item">Venda i distribució d'electrodomèstics</li>
+              <li class="nav__responsive-submenu-item">Instalacions i manteniment d'aires condicionats</li>
+              <li class="nav__responsive-submenu-item">Instalació i manteniment de telecomunicacions</li>
+              <li class="nav__responsive-submenu-item">Servei tècnic en reparació d'electrodomèstics</li>
+              <li class="nav__responsive-submenu-item">Instalació de sistemes d'aigües sanitàries</li>
+            </ul>
+          </li>
+          <li class="nav__responsive-menu-item nav__responsive-menu-item--collapsed"><div class="nav__responsive-menu-txt">Catàleg</div></li>
+          <li class="nav__responsive-menu-item nav__responsive-menu-item--collapsed"><div class="nav__responsive-menu-txt">Contacte</div></li>
+        </ul>
+      </div>
+    </div>
+    <!--Content-->
+    <section>
+    </section>
+    <!--Footer-->
+    <footer class="footer">
+      
+    </footer>
+  </body>
 </html>
