@@ -25,13 +25,13 @@
   <!--BODY-->
   <body>
     <!--Navigation menu-->
-    <div class="navigation">
+    <div class="nav">
       <!--Generic logo-->
-      <div class="nav__logo-container">
-        <img class="nav__logo-img" src="images/logo_expert_uno.png" alt="">
-        <div class="nav__logo-txt">
+      <div class="logo">
+        <img class="logo__img" src="images/logo_expert_uno.png" alt="">
+        <h3 class="logo__txt">
           ELECTRÒNICA ALCÚDIA
-        </div>
+        </h3>
       </div>
       <!--Menu-->
       <ul class="nav__menu">
@@ -71,12 +71,164 @@
         </ul>
       </div>
     </div>
-    <!--Content-->
-    <section>
-    </section>
-    <!--Footer-->
+    <!--CONTENT-->
+    <div id="contentBody">
+      <div class="section" id="homeSection">
+        <div id="aboutSubsection">
+          <div id="aboutSubsectionTxtContainer">
+            <div id="aboutSubsectionTxt">
+              <h2>Qui som?</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti molestiae, ut, odio eaque ex iusto sequi, eos minus enim doloribus officia? Quo placeat delectus vel natus quisquam blanditiis, nulla eaque.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ex molestiae pariatur suscipit aut ratione reiciendis, assumenda, optio sit ipsum nulla ullam minus repudiandae totam fuga recusandae distinctio quas placeat.
+              </p>
+            </div>
+          </div>
+          <div id="aboutSubsectionImg">
+            <img src="./images/expert_store_1.jpg" alt="Electrònica Alcúdia - Qui som">
+          </div>
+        </div>
+        <div id="whereSubsection">
+          <div id="whereSubsectionTxt">
+            <h2>On ens pots trobar?<span><i class="fas fa-map-marked-alt"></i></span></h2>
+          </div>
+          <div id="whereSubsectionMapContainer">
+            <div id="whereSubsectionMap">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6126.655716738613!2d3.132146800349199!3d39.84448513851047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12962c8ed608f175%3A0x80c935f73a29140f!2sExpert%20Electr%C3%B3nica%20Alcudia%20-%20TFONO%20971548127!5e0!3m2!1ses!2ses!4v1626707216373!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="servicesSection">
+        <!--Principal subsection-->
+        <div class="section__subsection" id="servicesMain">
+          <div id="servicesMainTxt">
+            <h2>Serveis</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem fugit nam quisquam inventore necessitatibus accusamus. Nesciunt assumenda quia ad eum beatae veritatis quibusdam soluta, eveniet sunt quam. Labore, assumenda hic.</p>
+          </div>
+          <div id="servicesMainImg">
+            <img src="./images/tecnitian_icon_2.png" alt="Electrònica Alcúdia - Tècnic">
+          </div>
+        </div>
+        <!--Services cards-->
+        <!--Venda i distribució d'electrodomèstics-->
+        <div class="section">
+          <div class="service__target" id="servicesOne">
+            <div class="service__target-base">
+              <div class="servicesImg">
+                <img src="./images/electronics_1.png" alt="">
+              </div>
+              <div class="servicesTxt">
+                <h3>Venda i distribució d'electrodomèstics</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus ipsam vel omnis exercitationem, tempora voluptatum adipisci at optio sed dolorem maxime aperiam quibusdam quo molestias ullam, delectus rerum autem voluptate?</p>
+              </div>
+            </div>
+          </div>
+          <div class="service__target" id="servicesTwo">
+            <div class="service__target-base reverse">
+              <div class="servicesImg">
+                <img src="./images/air_conditioning_2.png" alt="">
+              </div>
+              <div class="servicesTxt">
+                <h3>Instalacions i manteniment d'aires condicionats</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ipsum, culpa, accusantium esse sit harum modi ratione porro quia explicabo reprehenderit quidem ipsa nisi nulla? Laboriosam fuga quos voluptas totam!</p>
+              </div>
+            </div>
+          </div>
+          <div class="service__target" id="servicesThree">
+            <div class="service__target-base">
+              <div class="servicesImg">
+                <img src="./images/antenna_3.png" alt="">
+              </div>
+              <div class="servicesTxt">
+                <h3>Instalació i manteniment de telecomunicacions</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ipsum, culpa, accusantium esse sit harum modi ratione porro quia explicabo reprehenderit quidem ipsa nisi nulla? Laboriosam fuga quos voluptas totam!</p>
+              </div>
+            </div>
+          </div>
+          <div class="service__target" id="servicesFour">
+            <div class="service__target-base reverse">
+              <div class="servicesImg">
+                <img src="./images/tools_3.png" alt="">
+              </div>
+              <div class="servicesTxt">
+                <h3>Servei tècnic en reparació d'electrodomèstics</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ipsum, culpa, accusantium esse sit harum modi ratione porro quia explicabo reprehenderit quidem ipsa nisi nulla? Laboriosam fuga quos voluptas totam!</p>
+              </div>
+            </div>
+          </div>
+          <div class="service__target" id="servicesFive">
+            <div class="service__target-base">
+              <div class="servicesImg">
+                <img src="./images/sanitary_watter_1.png" alt="">
+              </div>
+              <div class="servicesTxt">
+                <h3>Instalació de sistemes d'aigües sanitàries</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ipsum, culpa, accusantium esse sit harum modi ratione porro quia explicabo reprehenderit quidem ipsa nisi nulla? Laboriosam fuga quos voluptas totam!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="catalogueSection">
+        <div id="catalogueSectionImg">
+          <img src="./images/home_apliances_1.jpg" alt="">
+        </div>
+        <div id="catalogueSectionTxt">
+          <div id="catalogueSectionTxtContainer">
+            <h2>Descarrega't el nostre catàleg!</h2>
+            <div id="downloadIcon"><i class="fas fa-file-download"></i></div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="contactSection">
+        <form>
+          <input type="text" >
+        </form>
+      </div>
+    </div>
+    <!--FOOTER-->
     <footer class="footer">
-      
+      <!--Logo-->
+      <div class="logo">
+        <img class="logo__img" src="images/logo_expert_uno.png" alt="">
+        <h3 class="logo__txt">
+          ELECTRÒNICA ALCÚDIA
+        </h3>
+      </div>
+      <!--Content-->
+      <div class="content">
+        <div class="content__item">
+          <h4>CONTACTE</h4>
+          <div class="content__item-list">
+            <div class="list__item button to-contact">Per a contactar</div>
+            <div class="list__item">Num tenda</div>
+          </div>
+        </div>
+        <div class="content__item">
+          <h4>DIRECCIÓ</h4>
+          <div class="content__item-list">
+            <div class="list__item button to-ubication">Localització</div>
+            <div class="list__item">Carrer Mar i Estany, 1, 07400 Port d'Alcúdia, Illes Balears</div>
+          </div>
+        </div>
+        <div class="content__item" id="media">
+          <h4>XARXES SOCIALS</h4>
+          <div class="content__item-list">
+            <div class="list__item"><a href="https://www.instagram.com/expert_port_alcudia/"><i class="fab fa-instagram"></i></a></div>
+          </div>
+        </div>
+        <div class="content__item">
+          <h4>ALTRES ENLLAÇOS</h4>
+          <div class="content__item-list">
+            <div class="list__item"><a href="">Polítiques de privacitat</a></div>
+            <div class="list__item"><a href="">Termes d'ús</a></div>
+          </div>
+        </div>
+      </div>
+      <div id="copyright">
+        copyright
+      </div>
     </footer>
   </body>
 </html>
