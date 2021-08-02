@@ -1,18 +1,38 @@
 'use strict'
 
 document.addEventListener('DOMContentLoaded', () => {
-    // VARIABLES
-    // Primitive ones
-    let arrowRotated = false;                   // To know if the arrow has been rotated
 
+    // VARIABLES
     // DOM elements
     const servicesArrow = document.getElementById('servicesArrow');
     const servicesTab = document.getElementById('servicesTab');
+    const navResponsiveMenu = document.getElementsByClassName('nav__responsive-menu')[0];
     const navResponsiveSubmenu = document.getElementsByClassName('nav__responsive-submenu')[0];
     const navResponsiveButton = document.getElementsByClassName('nav__responsive-button')[0];
+    const whereSubsection = document.getElementById('whereSubsection');
     let navResponsiveMenuItem = document.getElementsByClassName('nav__responsive-menu-item');
+    // Sections
+    let sections = document.getElementsByClassName('scroll');
+    let servicesTargets = document.getElementsByClassName('service__target');
+    // Nav buttons
+    let menuButtons = document.getElementsByClassName('nav__menu-button');
+    let submenuButtons = document.getElementsByClassName('nav__submenu-button');
+    let responsiveMenuButtons = document.getElementsByClassName('nav__responsive-menu-button');
+    let responsiveSubmenuButtons = document.getElementsByClassName('nav__responsive-submenu-button');
+    // Footer buttons
+    const toContact = document.getElementById('toContact');
+    const toUbication = document.getElementById('toUbication');
 
-    navResponsiveMenuItem = Array.prototype.slice.call(navResponsiveMenuItem);
+    // Primitive ones
+    let arrowRotated = false;                   // To know if the arrow has been rotated
+    // Converting the htmlcollections to array
+    sections = Array.prototype.slice.call(sections);
+    servicesTargets = Array.prototype.slice.call(servicesTargets);
+    menuButtons = Array.prototype.slice.call(menuButtons);
+    submenuButtons = Array.prototype.slice.call(submenuButtons);
+    responsiveMenuButtons = Array.prototype.slice.call(responsiveMenuButtons);
+    responsiveSubmenuButtons = Array.prototype.slice.call(responsiveSubmenuButtons);
+    navResponsiveMenuItem = Array.prototype.slice.call(navResponsiveMenuItem);    
 
     // Logic
     main();
@@ -37,6 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             setMenuToggler();
         };
+        // Adding the nav button events
+        setEventListeners();
     }
 
     // ARROW DOWN ANIMATION
@@ -90,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ADDING THE TOGGLE EFFECT TO THE MENU DISPLAY
     async function setMenuToggler () {
+        navResponsiveMenu.classList.toggle('nav__responsive-menu--collapsed');
         for (let i = 0; i < navResponsiveMenuItem.length; i++) {
             navResponsiveMenuItem[i].classList.toggle('nav__responsive-menu-item--collapsed');
             await customSleep(80);
@@ -100,5 +123,47 @@ document.addEventListener('DOMContentLoaded', () => {
         arrowUpRotationAnimation();
         setServicesTabColor("black");
         navResponsiveSubmenu.classList.add('nav__responsive-submenu--collapsed');
+    }
+
+    function setEventListeners () {
+        // Nav menu events
+        let top = 0;
+        for (let i = 0; i < menuButtons.length; i++) {
+            menuButtons[i].addEventListener('click', () => {
+                addScrollingEvent(sections, i, 'end');
+            });
+            responsiveMenuButtons[i].addEventListener('click', () => {
+                addScrollingEvent(sections, i, 'end');
+            });
+        }
+        for (let i = 0; i < submenuButtons.length; i++) {
+            submenuButtons[i].addEventListener('click', () => {
+                addScrollingEvent(servicesTargets, i, 'center');
+            });
+            responsiveSubmenuButtons[i].addEventListener('click', () => {
+                addScrollingEvent(servicesTargets, i, 'center');
+            });
+        }
+        toContact.onclick = () => {
+            sections[3].scrollIntoView({
+                block: 'end',
+                behavior: 'smooth'
+            });
+        };
+        toUbication.onclick = () => {
+            whereSubsection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        };
+    }
+
+    function addScrollingEvent (array, elemNumber, block) {
+        hideResponsiveSubmenu(); //Hide the responsive submenu before hidding the menu
+        setMenuToggler(); // Hide the responsive navigation menu
+        array[elemNumber].scrollIntoView({ 
+            behavior: 'smooth',
+            block: block 
+        });
     }
 });

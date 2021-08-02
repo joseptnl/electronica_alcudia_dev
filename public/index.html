@@ -4,7 +4,7 @@
   <!--HEAD-->
   <head>
     <!--Meta-->
-    <title>Electrònica Alcúdia - Home</title>
+    <title>Electrònica Alcúdia</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +21,8 @@
     <!--Scripts-->
     <script src="https://kit.fontawesome.com/99101d434a.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./javascripts/menu.js"></script>
+    <script type="text/javascript" src="./javascripts/contactForm.js"></script>
+    
   </head>
   <!--BODY-->
   <body>
@@ -35,46 +37,47 @@
       </div>
       <!--Menu-->
       <ul class="nav__menu">
-        <li class="nav__menu-item">Inici</li>
-        <li class="nav__menu-item" id="servicesLink">Serveis
+        <li class="nav__menu-item"><div class="nav__menu-button">Inici</div></li>
+        <li class="nav__menu-item" id="servicesLink"><div class="nav__menu-button">Serveis</div>
           <ul class="nav__submenu">
-            <li class="nav__submenu-item">Venda i distribució d'electrodomèstics</li>
-            <li class="nav__submenu-item">Instalacions i manteniment d'aires condicionats</li>
-            <li class="nav__submenu-item">Instalació i manteniment de telecomunicacions</li>
-            <li class="nav__submenu-item">Servei tècnic en reparació d'electrodomèstics</li>
-            <li class="nav__submenu-item">Instalació de sistemes d'aigües sanitàries</li>
+            <li class="nav__submenu-item nav__submenu-button">Venda i distribució d'electrodomèstics</li>
+            <li class="nav__submenu-item nav__submenu-button">Instalacions i manteniment d'aires condicionats</li>
+            <li class="nav__submenu-item nav__submenu-button">Instalació i manteniment de telecomunicacions</li>
+            <li class="nav__submenu-item nav__submenu-button">Servei tècnic en reparació d'electrodomèstics</li>
+            <li class="nav__submenu-item nav__submenu-button">Instalació de sistemes d'aigües sanitàries</li>
           </ul>
         </li>
-        <li class="nav__menu-item">Catàleg</li>
-        <li class="nav__menu-item">Contacte</li>
+        <li class="nav__menu-item"><div class="nav__menu-button">Catàleg</div></li>
+        <li class="nav__menu-item"><div class="nav__menu-button">Contacte</div></li>
       </ul>
       <!--Responsive menu-->
-      <div class="nav__responsive ">
+      <div class="nav__responsive">
         <!--Open button-->
         <div class="nav__responsive-button">
           <i class="fas fa-bars"></i>
         </div>
         <!--Menu-->
-        <ul class="nav__responsive-menu">
-          <li class="nav__responsive-menu-item nav__responsive-menu-item--collapsed"><div class="nav__responsive-menu-txt">Inici</div></li>
+        <ul class="nav__responsive-menu nav__responsive-menu--collapsed">
+          <li class="nav__responsive-menu-item nav__responsive-menu-item--collapsed nav__responsive-menu-button"><div class="nav__responsive-menu-txt">Inici</div></li>
           <li class="nav__responsive-menu-item nav__responsive-menu-item--collapsed"><div class="nav__responsive-menu-txt" id="servicesTab">Serveis<i class="fas fa-chevron-down" id="servicesArrow"></i></div>
             <ul class="nav__responsive-submenu nav__responsive-submenu--collapsed">
-              <li class="nav__responsive-submenu-item">Venda i distribució d'electrodomèstics</li>
-              <li class="nav__responsive-submenu-item">Instalacions i manteniment d'aires condicionats</li>
-              <li class="nav__responsive-submenu-item">Instalació i manteniment de telecomunicacions</li>
-              <li class="nav__responsive-submenu-item">Servei tècnic en reparació d'electrodomèstics</li>
-              <li class="nav__responsive-submenu-item">Instalació de sistemes d'aigües sanitàries</li>
+              <li class="nav__responsive-submenu-item nav__responsive-menu-button">Els nostres serveis</li>
+              <li class="nav__responsive-submenu-item nav__responsive-submenu-button">Venda i distribució d'electrodomèstics</li>
+              <li class="nav__responsive-submenu-item nav__responsive-submenu-button">Instalacions i manteniment d'aires condicionats</li>
+              <li class="nav__responsive-submenu-item nav__responsive-submenu-button">Instalació i manteniment de telecomunicacions</li>
+              <li class="nav__responsive-submenu-item nav__responsive-submenu-button">Servei tècnic en reparació d'electrodomèstics</li>
+              <li class="nav__responsive-submenu-item nav__responsive-submenu-button">Instalació de sistemes d'aigües sanitàries</li>
             </ul>
           </li>
-          <li class="nav__responsive-menu-item nav__responsive-menu-item--collapsed"><div class="nav__responsive-menu-txt">Catàleg</div></li>
-          <li class="nav__responsive-menu-item nav__responsive-menu-item--collapsed"><div class="nav__responsive-menu-txt">Contacte</div></li>
+          <li class="nav__responsive-menu-item nav__responsive-menu-item--collapsed nav__responsive-menu-button"><div class="nav__responsive-menu-txt">Catàleg</div></li>
+          <li class="nav__responsive-menu-item nav__responsive-menu-item--collapsed nav__responsive-menu-button"><div class="nav__responsive-menu-txt">Contacte</div></li>
         </ul>
       </div>
     </div>
     <!--CONTENT-->
     <div id="contentBody">
       <div class="section" id="homeSection">
-        <div id="aboutSubsection">
+        <div class="scroll" id="aboutSubsection">
           <div id="aboutSubsectionTxtContainer">
             <div id="aboutSubsectionTxt">
               <h2>Qui som?</h2>
@@ -101,7 +104,7 @@
       </div>
       <div class="section" id="servicesSection">
         <!--Principal subsection-->
-        <div class="section__subsection" id="servicesMain">
+        <div class="section__subsection scroll" id="servicesMain">
           <div id="servicesMainTxt">
             <h2>Serveis</h2>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem fugit nam quisquam inventore necessitatibus accusamus. Nesciunt assumenda quia ad eum beatae veritatis quibusdam soluta, eveniet sunt quam. Labore, assumenda hic.</p>
@@ -112,7 +115,7 @@
         </div>
         <!--Services cards-->
         <!--Venda i distribució d'electrodomèstics-->
-        <div class="section">
+        <div class="section__subsection">
           <div class="service__target" id="servicesOne">
             <div class="service__target-base">
               <div class="servicesImg">
@@ -170,20 +173,45 @@
           </div>
         </div>
       </div>
-      <div class="section" id="catalogueSection">
+      <div class="section scroll" id="catalogueSection">
         <div id="catalogueSectionImg">
           <img src="./images/home_apliances_1.jpg" alt="">
         </div>
         <div id="catalogueSectionTxt">
           <div id="catalogueSectionTxtContainer">
             <h2>Descarrega't el nostre catàleg!</h2>
-            <div id="downloadIcon"><i class="fas fa-file-download"></i></div>
+            <a href="./resources/catalogue1.pdf" download="cataleg-Expert" id="downloadIconContainer"><i class="fas fa-file-download"></i></a>
           </div>
         </div>
       </div>
-      <div class="section" id="contactSection">
-        <form>
-          <input type="text" >
+      <div class="section scroll" id="contactSection">
+        <div id="contactSectionTxt">
+          <h2>Contacta amb nosaltres!</h2>
+        </div>
+        <form class="form">
+          <div class="form__section">
+            <span class="form__alert form__empty-alert">No pot estar buit</span>
+            <input class="form__input" type="text" placeholder="Nom" id="name">
+          </div>
+          <div class="form__section">
+            <span class="form__alert form__empty-alert">No pot estar buit</span>
+            <span class="form__alert" id="emailAlert">Falta l'@</span>
+            <input class="form__input" type="email" placeholder="Email" id="email">
+          </div>
+          <div class="form__section">
+            <span class="form__alert form__empty-alert">No pot estar buit</span>
+            <input class="form__input" type="text" placeholder="Assumpte" id="subject">
+          </div>
+          <div class="form__section">
+            <textarea class="form__input" placeholder="Missatge" id="text"></textarea>
+          </div>
+          <div class="form__section">
+            <input class="form__checkbox-btn" type="checkbox" name="accept">
+            <label class="form__checkbox-lbl" for="accept"> He llegit i accepto la política de privacitat</label>
+          </div>
+          <div class="form__button-container">
+            <button class="form__button" type="button">Enviar</button>
+          </div>
         </form>
       </div>
     </div>
@@ -201,14 +229,14 @@
         <div class="content__item">
           <h4>CONTACTE</h4>
           <div class="content__item-list">
-            <div class="list__item button to-contact">Per a contactar</div>
-            <div class="list__item">Num tenda</div>
+            <div class="list__item button" id="toContact">Per a contactar</div>
+            <div class="list__item">971 54 81 27</div>
           </div>
         </div>
         <div class="content__item">
           <h4>DIRECCIÓ</h4>
           <div class="content__item-list">
-            <div class="list__item button to-ubication">Localització</div>
+            <div class="list__item button" id="toUbication">Localització</div>
             <div class="list__item">Carrer Mar i Estany, 1, 07400 Port d'Alcúdia, Illes Balears</div>
           </div>
         </div>
