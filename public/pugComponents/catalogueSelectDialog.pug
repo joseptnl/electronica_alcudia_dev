@@ -1,0 +1,12 @@
+
+#catalogueSelectDialogContainer
+    #catalogueSelectDialog 
+        label.label Catàleg a afegir
+        input#selectCatalogueInput(type="file" name="fileSelector")
+        label.label Títol o descripció
+        input#setTitleInput(type="text" name="alt" placeholder="Títol o descripció.")
+        label.label Data de caducitat
+        input#setExpiryDateInput(type="date" name="expiryDate" placeholder="Data de caducitat.")
+        #catalogueSelectButtons
+            button#catalogueSelectAdd(type="button") Afegir
+            button#catalogueSelectCancel(type="button") Cancelar

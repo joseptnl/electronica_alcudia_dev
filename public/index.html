@@ -87,8 +87,21 @@
               </p>
             </div>
           </div>
+          <!--
           <div id="aboutSubsectionImg">
             <img src="./images/expert_store_1.jpg" alt="Electrònica Alcúdia - Qui som">
+          </div>
+          -->
+          <!--Carousel-->
+          <div class="carousel">
+            <div class="movement-button left">
+              <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="movement-button right">
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <ul class="points-container">
+            </ul>
           </div>
         </div>
         <div id="whereSubsection">
@@ -174,13 +187,20 @@
         </div>
       </div>
       <div class="section scroll" id="catalogueSection">
-        <div id="catalogueSectionImg">
-          <img src="./images/home_apliances_1.jpg" alt="">
+        <div class="carousel">
+          <div class="movement-button left">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="movement-button right">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <ul class="points-container">
+          </ul>
         </div>
         <div id="catalogueSectionTxt">
           <div id="catalogueSectionTxtContainer">
             <h2>Descarrega't el nostre catàleg!</h2>
-            <a href="./resources/catalogue1.pdf" download="cataleg-Expert" id="downloadIconContainer"><i class="fas fa-file-download"></i></a>
+            <div id="downloadIconContainer"><i class="fas fa-file-download"></i></div>
           </div>
         </div>
       </div>
@@ -258,5 +278,15 @@
         copyright
       </div>
     </footer>
+    <!--Catalogues selection modal-->
+    <div class="modal">
+      <div class="content" id="cataloguesListContainer">
+        <button class="close-button">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul id="cataloguesList">
+        </ul>
+      </div>
+    </div>
   </body>
 </html>

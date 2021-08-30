@@ -12,6 +12,23 @@ body {
     background-color: #dfe4ea;
 }
 
+button {
+    transition: 0.5s;
+    border: none;
+    border-radius: 5px 5px 5px 5px;
+    background: #fe8c00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f83600, #fe8c00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f83600, #fe8c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+button:hover {
+    cursor: pointer;
+    color: rgba(255, 255, 255,1.0);
+    background: #feae00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f87400, #feae00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f87400, #feae00);
+}
+
 /* LOGO STYLES */
 .logo {
     display: flex;
@@ -38,6 +55,8 @@ body {
 #head {
     background-color: rgba(241, 242, 246,1.0);
     position: fixed;
+    z-index: 150;
+    top: 0;
     width: 100%;
     height: 100px;
 }
@@ -123,4 +142,216 @@ body {
     background: #feae00;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #f87400, #feae00);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #f87400, #feae00);
+}
+
+/* PANEL STYLES */
+#panel {
+    width: 80%;
+    border-radius: 10px 10px 10px 10px;
+    min-height: 400px;
+    margin: auto;
+    margin-bottom: 100px;
+    margin-top: 150px;
+}
+
+#tabs {
+    width: 100%;
+    display: flex;
+}
+
+.tab {
+    transition: 0.5s;
+    text-align: center;
+    background-color: rgba(255, 255, 255,1.0);
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    margin-right: 10px;
+}
+
+.tab:hover {
+    cursor: pointer;
+    color: rgba(255, 165, 2,1.0);
+    box-shadow: 1px 1px 3px 3px rgba(116, 125, 140,0.1);
+}
+
+.tab--active {
+    background: #fe8c00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f83600, #fe8c00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f83600, #fe8c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.tab--active:hover {
+    background: #feae00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f87400, #feae00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f87400, #feae00);
+    color: rgba(255, 255, 255,1.0);
+}
+
+#content {
+    margin-top: 10px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgba(255, 255, 255,1.0);
+    width: 100%;
+    min-height: 100%;
+    box-shadow: 1px 1px 3px 3px rgba(116, 125, 140,0.1);
+}
+
+.subsection {
+    width: 100%;
+    border-bottom: 2px solid rgba(116, 125, 140,0.2);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.miniaturesContainer, .cataloguesContainer {
+    background-color: rgba(241, 242, 246,1.0);
+    height: 200px;
+    margin: 20px 0;
+    border-radius: 10px 10px 10px 10px;
+    overflow: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-right: 40px;
+}
+
+.subsection .buttonsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+.addImageBtn, .addCatalogueBtn {
+    padding: 10px;
+    margin-left: 25px;
+}
+
+.addImageBtn:hover, .addCatalogueBtn:hover {
+    box-shadow: 1px 1px 3px 3px rgba(116, 125, 140,0.1);
+}
+
+.imageMiniature, .catalogueMiniature {
+    position: relative;
+    height: 150px;
+    max-width: 150px;
+    min-width: 150px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-left: 40px;
+    background-color: rgba(255, 255, 255,0.5);
+}
+
+.imageMiniature:hover, .catalogueMiniature:hover {
+    cursor: pointer;
+    outline: 2px solid rgba(116, 125, 140,0.2);
+}
+
+.imageMiniature:hover > .deleteBtnContainer,
+ .catalogueMiniature:hover > .deleteBtnContainer {
+    display: flex;
+}
+
+.imageMiniature img {
+    object-fit: cover;
+    width: 80%;
+    min-height: 80%;
+}
+
+#pdfIconContainer {
+    width: 80%;
+    min-height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pdfIconContainer i {
+    font-size: 40px;
+}
+
+.imageMiniature p, .catalogueMiniature p {
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.deleteBtnContainer {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: rgba(255, 99, 72,1.0);
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 100px;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.deleteBtnContainer:hover > .deleteBtn {
+    color: rgba(255, 255, 255,1.0);
+}
+
+#imageSelectDialogContainer, #catalogueSelectDialogContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    background-color: rgba(116, 125, 140,0.5);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#imageSelectDialog, #catalogueSelectDialog {
+    width: 20%;
+    height: 300px;
+    background-color: rgba(255, 255, 255,1.0);
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#imageSelectButtons, #catalogueSelectButtons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#imageSelectAdd, #catalogueSelectAdd {
+    padding: 10px;
+}
+
+#imageSelectCancel, #catalogueSelectCancel {
+    padding: 10px;
+}
+
+#imageSelectDialog input, #catalogueSelectDialog input {
+    width: 80%;
+}
+
+#setAltInput, #setTitleInput, #setExpiryDateInput {
+    padding: 5px;
+}
+
+.label {
+    text-align: left;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo__txt {
+        display: none;
+    }
 }

@@ -56,7 +56,7 @@ app.use((req, res, next) => {
 /**
  * API ROUTES
  */
-app.use('/', indexRouter);              // Route to render the index page
+app.use('/', indexRouter);              // RorefreshCataloguesute to render the index page
 app.use('/admin', adminRouter);         // Route to render the admin login page
 app.use('/message', messageRouter);     // Route to access the messages API
 

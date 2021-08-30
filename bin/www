@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('electronica-alcudia:server');
 var http = require('http');
+const cron = require("node-cron");
 
 /**
  * Get port from environment and store in Express.
@@ -20,6 +21,23 @@ app.set('port', port);
 */
 
 var server = http.createServer(app);
+
+/**
+ * Setting scheduled tasks
+ */
+cron.schedule("1 0 * * *", () => {
+  http.request({
+    host: "localhost",
+    port: port,
+    path: "/admin/refresh-catalogues",
+    method: "GET"
+  }, (response) => {
+    response.on("end", () => {
+      console.log("The refresh action has ended.");
+    })
+  })
+    .end();
+});
 
 /**
 * Listen on provided port, on all network interfaces.
